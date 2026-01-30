@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "FANZA Helper",
+  "version": "1.0.0",
+  "description": "FANZA/DMM links helper with external availability checks.",
+  "permissions": [],
+  "host_permissions": [
+    "https://missav.ws/*",
+    "https://tktube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
